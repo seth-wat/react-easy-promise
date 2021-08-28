@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react'
 
-const useApi = (promise, effects) => {
+const usePromise = (promise, effects) => {
   const [executed, setExecuted] = useState([])
 
   const { onSuccess, onError, parseResult, parseError } = effects
@@ -67,4 +67,4 @@ const useApi = (promise, effects) => {
   }
 }
 
-export default useApi
+export default usePromise
