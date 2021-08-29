@@ -2,13 +2,9 @@
 
 - [x] Reduces the overhead of working with promises
 - [x] Prevents race conditions
-- [x] Keeps it simple
+- [x] Makes life easy
 
 `npm install react-easy-promise`
-
-```javascript
-const { request, loading, error, result } = usePromise()
-```
 
 ### How it works:
 
@@ -18,7 +14,7 @@ import { useEffect } from 'react'
 
 const fetchColors = () =>
   new Promise(resolve => {
-    setTimeout(() => resolve(['red', 'yellow', 'blue']), 3000)
+    setTimeout(() => resolve(['red', 'yellow', 'blue']), 2000)
   })
 
 const ColorDisplay = () => {
