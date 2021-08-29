@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react'
 
-const usePromise = (promise, effects) => {
+const usePromise = (promise, effects = {}) => {
   const [executed, setExecuted] = useState([])
 
   const { onSuccess, onError, parseResult, parseError } = effects

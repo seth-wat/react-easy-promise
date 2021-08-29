@@ -63,7 +63,7 @@ test('result is the value of the resolved promise', async () => {
       resolve('success')
     }, 1)
   })
-  const { result } = renderHook(() => usePromise(() => promise, {}))
+  const { result } = renderHook(() => usePromise(() => promise))
 
   await act(async () => result.current.request())
 
@@ -77,7 +77,7 @@ test('error is the value of the rejected promise', async () => {
       reject('error')
     }, 1)
   })
-  const { result } = renderHook(() => usePromise(() => promise, {}))
+  const { result } = renderHook(() => usePromise(() => promise))
 
   await act(async () => result.current.request())
 
@@ -91,7 +91,7 @@ test('loading is false', async () => {
       resolve()
     }, 1)
   })
-  const { result } = renderHook(() => usePromise(() => promise, {}))
+  const { result } = renderHook(() => usePromise(() => promise))
   expect(result.current.loading).toBeFalsy()
   await act(async () => result.current.request())
   expect(result.current.loading).toBeFalsy()
