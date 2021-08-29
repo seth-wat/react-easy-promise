@@ -24,7 +24,7 @@ const usePromise = (promise, effects) => {
     }
   }, [executed])
 
-  const request = async (params = []) => {
+  const request = async (...params) => {
     const start = Date.now()
     setExecuted(prev => [...prev, { start }])
     try {

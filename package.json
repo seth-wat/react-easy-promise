@@ -25,23 +25,28 @@
   "scripts": {
     "build": "rollup -c",
     "prepare": "husky install",
-    "pre-commit": "pretty-quick --staged"
+    "pre-commit": "pretty-quick --staged && npm run test",
+    "test": "jest --transformIgnorePatterns \"node_modules/(?!@codemirror)/\""
   },
   "peerDependencies": {
     "react": "^17.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
-    "@babel/preset-env": "^7.0.0",
+    "@babel/plugin-transform-modules-commonjs": "^7.15.0",
+    "@babel/preset-env": "^7.15.0",
     "@babel/preset-react": "^7.0.0",
     "@rollup/plugin-babel": "^5.3.0",
     "@rollup/plugin-commonjs": "^20.0.0",
     "@rollup/plugin-node-resolve": "^13.0.4",
     "@rollup/plugin-url": "^6.1.0",
+    "@testing-library/react-hooks": "^7.0.1",
     "husky": "^7.0.0",
+    "jest": "^27.1.0",
     "prettier": "^2.3.2",
     "pretty-quick": "^3.1.1",
     "react": "^17.0.1",
+    "react-test-renderer": "^17.0.2",
     "rollup": "^2.56.3",
     "rollup-plugin-peer-deps-external": "^2.2.0"
   }
