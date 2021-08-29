@@ -127,10 +127,10 @@ export default ColorDisplay
 
 - `fn`: any function that returns a promise
 - `effects (optional object)`:
-  - `onSuccess`: a function that will be called when the promise resolves, with the resolved value.
-  - `onError`: a function that will be called when the promise rejects, with the rejected value
-  - `parseResult`: a function that will be called with the resolved value before it is passed to `onSuccess` or returned.
-  - `parseError`: a function that will be called with the rejected value before it is passed to `onError` or returned.
+  - `onSuccess`: called when the promise resolves with the resolved value
+  - `onError`: called when the promise rejects with the rejected value
+  - `parseResult`: called with the resolved value before it is passed to `onSuccess` or returned
+  - `parseError`: called with the rejected value before it is passed to `onError` or returned
 
 **returns:**
 
