@@ -121,4 +121,26 @@ const ColorDisplay = () => {
 export default ColorDisplay
 ```
 
+## API Reference
+
+`usePromise(fn, effects)`
+
+- `fn`: any function that returns a promise
+- `effects (optional)`: an object with one or more properties
+  - `onSuccess`: a function that will be called when the promise resolves, with the resolved value.
+  - `onError`: a function that will be called when the promise rejects, with the rejected value
+  - `parseResult`: a function that will be called with the resolved value before it is passed to `onSuccess` or returned.
+  - `parseError`: a function that will be called with the rejected value before it is passed to `onError` or returned.
+
+**returns:**
+
+```javascript
+{
+  loading, // undefined (false) or true
+  error, // the raw rejected value or the result of parseError if it was supplied
+  result, // the raw resolved value or the result of parseResult if it was supplied
+  request, // a wrapper around the supplied function to be used in its place
+}
+```
+
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
