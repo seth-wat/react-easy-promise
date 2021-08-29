@@ -8,7 +8,7 @@
 
 ### How it works:
 
-```react17
+```javascript
 import { usePromise } from 'react-easy-promise'
 import { useEffect } from 'react'
 
@@ -50,7 +50,7 @@ export default ColorDisplay
 
 ### Callbacks:
 
-```react17
+```javascript
 import { usePromise } from 'react-easy-promise'
 
 const fetchColors = shouldResolve =>
@@ -78,12 +78,11 @@ const ColorDisplay = () => {
 }
 
 export default ColorDisplay
-
 ```
 
 ### Race Conditions:
 
-```react17
+```javascript
 import { usePromise } from 'react-easy-promise'
 import { useEffect } from 'react'
 
