@@ -1,7 +1,7 @@
 {
   "name": "react-easy-promise",
   "version": "1.0.0",
-  "description": "Pain free handling of promises in React components",
+  "description": "Pain free handling of promises in React components.",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/seth-wat/react-easy-promise.git"
@@ -10,7 +10,7 @@
     "[]"
   ],
   "author": "Seth Watkins",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/seth-wat/react-easy-promise/issues"
   },
