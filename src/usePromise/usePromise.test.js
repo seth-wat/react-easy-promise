@@ -92,39 +92,7 @@ test('loading is false', async () => {
     }, 1)
   })
   const { result } = renderHook(() => usePromise(() => promise, {}))
-  expect(result.current.loading).toBe(false)
+  expect(result.current.loading).toBeFalsy()
   await act(async () => result.current.request())
-  expect(result.current.loading).toBe(false)
-})
-
-test("result is equal to the last executed promise's resolved value", async () => {
-  const promiseA = new Promise(resolve => {
-    setTimeout(() => {
-      resolve('a')
-    }, 1)
-  })
-  // increase timeout of b to simulate race condition
-  const promiseB = new Promise(resolve => {
-    setTimeout(() => {
-      resolve('b')
-    }, 10)
-  })
-  const promiseC = new Promise(resolve => {
-    setTimeout(() => {
-      resolve('c')
-    }, 1)
-  })
-
-  const { result } = renderHook(() => usePromise(promise => promise, {}))
-
-  await act(async () => result.current.request(promiseA))
-  await act(async () => result.current.request(promiseB))
-  await act(async () => {
-    const p1 = result.current.request(promiseA)
-    const p2 = result.current.request(promiseB)
-    const p3 = result.current.request(promiseC)
-    return Promise.all([p1, p2, p3])
-  })
-
-  expect(result.current.result).toEqual('c')
+  expect(result.current.loading).toBeFalsy()
 })

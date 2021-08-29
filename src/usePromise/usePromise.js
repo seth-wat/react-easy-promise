@@ -7,14 +7,9 @@ const usePromise = (promise, effects) => {
 
   const status = useMemo(() => {
     const finished = executed.filter(exec => exec.end)
-    const mostRecent = [...finished].sort(exec => exec.start).reverse()[0] || {}
-    return {
-      ...mostRecent,
-      loading:
-        executed.length > finished.length &&
-        (executed.length === 1 ||
-          executed.some(exec => exec.start > mostRecent.start)),
-    }
+    return executed.length > finished.length
+      ? { loading: true }
+      : [...finished].sort(exec => exec.start).reverse()[0] || {}
   }, [executed, onSuccess, onError])
 
   useEffect(() => {
