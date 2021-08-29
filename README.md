@@ -6,6 +6,10 @@
 
 `npm install react-easy-promise`
 
+```javascript
+const { request, loading, error, result } = usePromise()
+```
+
 ### How it works:
 
 ```javascript
@@ -136,7 +140,7 @@ export default ColorDisplay
 
 ```javascript
 {
-  loading, // undefined (false) or true
+  loading, // undefined (false case) or true
   error, // the raw rejected value or the result of parseError if it was supplied
   result, // the raw resolved value or the result of parseResult if it was supplied
   request, // a wrapper around the supplied function to be used in its place
