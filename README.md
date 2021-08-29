@@ -18,25 +18,25 @@ const fetchColors = () =>
   })
 
 const ColorDisplay = () => {
-  const { request, loading, error, result } = usePromise(fetchColors, {})
+  const { request, loading, error, result } = usePromise(fetchColors)
 
   useEffect(() => {
     request()
   }, [])
 
   if (loading) {
-    return <div>... fetching colors</div>
+    return <div>... loading</div>
   }
 
   if (error) {
-    return <div>... an error occurred fetching colors</div>
+    return <div>... error</div>
   }
 
   if (result) {
     return (
       <div>
         {result.map(color => (
-          <p>{color}</p>
+          <p key={color}>{color}</p>
         ))}
       </div>
     )
