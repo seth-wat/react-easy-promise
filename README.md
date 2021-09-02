@@ -1,6 +1,6 @@
 # React Easy Promise
 
-:white_check_mark: Reduces the overhead of working with promises
+:white_check_mark: Reduces the overhead of working with promises  
 :white_check_mark: Prevents race conditions  
 :white_check_mark: Makes life easy
 
