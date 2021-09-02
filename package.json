@@ -7,7 +7,14 @@
     "url": "git+https://github.com/seth-wat/react-easy-promise.git"
   },
   "keywords": [
-    "[]"
+    "react",
+    "promise",
+    "api",
+    "fetch",
+    "request",
+    "query",
+    "easy",
+    "simple"
   ],
   "author": "Seth Watkins",
   "license": "MIT",

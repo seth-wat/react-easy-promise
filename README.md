@@ -1,8 +1,6 @@
 # React Easy Promise
 
-- [x] Reduces the overhead of working with promises
-- [x] Prevents race conditions
-- [x] Makes life easy
+-[x] Reduces the overhead of working with promises -[x] Prevents race conditions -[x] Makes life easy
 
 `npm install react-easy-promise`
 
