@@ -1,6 +1,8 @@
 # React Easy Promise
 
--[x] Reduces the overhead of working with promises -[x] Prevents race conditions -[x] Makes life easy
+:white_check_mark: Reduces the overhead of working with promises  
+:white_check_mark: Prevents race conditions  
+:white_check_mark: Makes life easy
 
 `npm install react-easy-promise`
 
